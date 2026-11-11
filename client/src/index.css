@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Light MODE Digital Sky / Calm Blue-Teal (Sexy Blue / Ocean Breeze: #2193b0 to #6dd5ed) */
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #0f172a;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  /* Dark MODE Midnight Calm / Slate Indigo (incorporating #1f4037 to deep slate-indigo with #99f2c8 highlights) */
+  .dark body,
+  body.dark,
+  html.dark body {
+    background: linear-gradient(135deg, #081217 0%, #102624 35%, #1f4037 65%, #0c1a24 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #f1f5f9;
+  }
+}
+
+/* Custom scrollbars for clean modern LMS UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Elite Linear Gradient Mesh & Background Patterns */
+.bg-ocean-breeze {
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+
+.bg-midnight-calm {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+
+.bg-canvas-gradient {
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+
+.dark .bg-canvas-gradient {
+  background: linear-gradient(135deg, #081217 0%, #102624 35%, #1f4037 65%, #0c1a24 100%);
+}
+
+.bg-grid-mesh {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+.dark .bg-grid-mesh {
+  background-image: 
+    linear-gradient(to right, rgba(153, 242, 200, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(153, 242, 200, 0.05) 1px, transparent 1px);
+}
+
+.bg-dot-mesh {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+}
+
+.dark .bg-dot-mesh {
+  background-image: radial-gradient(circle, rgba(153, 242, 200, 0.08) 1px, transparent 1px);
+}
+
+/* Subtle Glowing Ambient Orbs */
+.glow-gradient-light {
+  background: radial-gradient(circle at 50% 30%, rgba(109, 213, 237, 0.35), rgba(33, 147, 176, 0.15) 50%, transparent 70%);
+}
+
+.glow-gradient-dark {
+  background: radial-gradient(circle at 50% 30%, rgba(153, 242, 200, 0.18), rgba(31, 64, 55, 0.35) 55%, transparent 75%);
+}
+
